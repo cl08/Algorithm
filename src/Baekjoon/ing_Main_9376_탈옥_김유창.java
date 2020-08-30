@@ -50,45 +50,45 @@ public class ing_Main_9376_탈옥_김유창 {
 			visit = new boolean[h][w][count];
 			while (!q.isEmpty()) {
 				int[] temp = q.poll();
-				if (map[temp[0]][temp[1]] == '#')
-					dfs(temp[0], temp[1], 1, 0, 0);
-				else if (map[temp[0]][temp[1]] == '$')
-					dfs(temp[0], temp[1], 0, 1, 0);
+//				if (map[temp[0]][temp[1]] == '#')
+//					dfs(temp[0], temp[1], 1, 0, 0);
+//				else if (map[temp[0]][temp[1]] == '$')
+//					dfs(temp[0], temp[1], 0, 1, 0);
 			}
 			sb.append(min).append('\n');
 		}
 		System.out.println(sb);
 	}
 
-	public static void dfs(int x, int y, int door, int prisoner, int count) {
-		visit[x][y][count] = true;
-		if (prisoner == 2) {
-			if (door < min)
-				min = door;
-			return;
-		}
-		if (min <= door)
-			return;
-
-		boolean[][] visitCopy = new boolean[h][w];
-		for (int i = 0; i < h; i++) {
-			for (int j = 0; j < w; j++) {
-				visitCopy[i][j] = visit[i][j];
-			}
-		}
-		int tx, ty;
-		for (int i = 0; i < 4; i++) {
-			tx = x + dx[i];
-			ty = y + dy[i];
-			if (tx >= 0 && tx < h && ty >= 0 && ty < w && !visit[tx][ty] && map[tx][ty] != '*') {
-				if (map[tx][ty] == '.')
-					dfs(tx, ty, door, prisoner);
-				else if (map[tx][ty] == '$')
-					dfs(tx, ty, door, prisoner + 1);
-				else if (map[tx][ty] == '#') {
-					dfs(tx, ty, door + 1, prisoner);
-				}
-			}
-		}
-	}
+//	public static void dfs(int x, int y, int door, int prisoner, int count) {
+//		visit[x][y][count] = true;
+//		if (prisoner == 2) {
+//			if (door < min)
+//				min = door;
+//			return;
+//		}
+//		if (min <= door)
+//			return;
+//
+//		boolean[][] visitCopy = new boolean[h][w];
+//		for (int i = 0; i < h; i++) {
+//			for (int j = 0; j < w; j++) {
+//				visitCopy[i][j] = visit[i][j];
+//			}
+//		}
+//		int tx, ty;
+//		for (int i = 0; i < 4; i++) {
+//			tx = x + dx[i];
+//			ty = y + dy[i];
+//			if (tx >= 0 && tx < h && ty >= 0 && ty < w && !visit[tx][ty] && map[tx][ty] != '*') {
+//				if (map[tx][ty] == '.')
+//					dfs(tx, ty, door, prisoner);
+//				else if (map[tx][ty] == '$')
+//					dfs(tx, ty, door, prisoner + 1);
+//				else if (map[tx][ty] == '#') {
+//					dfs(tx, ty, door + 1, prisoner);
+//				}
+//			}
+//		}
+//	}
 }

@@ -1,4 +1,4 @@
-package com.ssafy.disjointset;
+package Reference;
 
 import java.io.BufferedReader;
 import java.io.IOException;
