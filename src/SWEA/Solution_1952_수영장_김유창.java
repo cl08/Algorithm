@@ -35,6 +35,9 @@ public class Solution_1952_수영장_김유창 {
 	}
 
 	public static void dfs(int count, int sum) {
+		if (min < sum) {
+			return;
+		}
 		if (count > 11) {
 			if (min > sum) {
 				min = sum;

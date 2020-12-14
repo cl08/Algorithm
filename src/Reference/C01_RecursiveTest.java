@@ -27,7 +27,7 @@ public class C01_RecursiveTest {
 	private static void combination(int index, int count) { // index : 조합대상 고려 원소 시작인덱스. count : 직전까지 조합한 원소의 수
 		if(count == R ) {
 			totalCount++;
-			//System.out.println(Arrays.toString(pick));
+			System.out.println(Arrays.toString(pick));
 			return ;
 		}
 		for (int i = index; i < N; i++) {

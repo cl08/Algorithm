@@ -44,7 +44,7 @@ public class Solution_2117_홈방범서비스_김유창 {
 				for (int j = 0; j < N; j++) {
 					visitInit();
 					q.clear();
-					dfs(i, j);
+					bfs(i, j);
 				}
 			}
 			sb.append('#').append(tc).append(' ').append(result).append('\n');
@@ -58,7 +58,7 @@ public class Solution_2117_홈방범서비스_김유창 {
 		}
 	}
 
-	private static void dfs(int x, int y) {
+	private static void bfs(int x, int y) {
 		depth = 0;
 		count = 0;
 		visit[x][y] = true;
