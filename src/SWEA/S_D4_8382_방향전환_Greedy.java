@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class S_D4_8382_방향전환_김유창_Greedy {
+public class S_D4_8382_방향전환_Greedy {
 	static int startX, startY, endX, endY, count;
 	static boolean flag;
 
