@@ -35,7 +35,8 @@ public class P_2_다리를지나는트럭 {
 					start++;
 					truck_times[i] = -1;
 					current_weight = current_weight - bridge.poll();
-				} else if (truck_times[i] == 0) {
+				}
+				else if (truck_times[i] == 0) {
 					break;
 				}
 				else {
