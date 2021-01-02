@@ -1,6 +1,6 @@
 package Programmers;
 
-public class P_2_네트워크 {
+public class P_3_네트워크 {
 	public int solution(int n, int[][] computers) {
 		int answer = 0;
 		boolean[] visit = new boolean[n];
